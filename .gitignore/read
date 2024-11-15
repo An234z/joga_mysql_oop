@@ -1,0 +1,8 @@
+# IDE kaustad
+.idea/
+
+# Node.js moodulid
+node_modules/
+
+# Logid ja ajutised failid
+*.log
