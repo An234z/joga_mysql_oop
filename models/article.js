@@ -8,6 +8,10 @@ class ArticleModel extends BaseSQLModel {
     async findOneBySlug(slug) {
         return await this.findOne('slug', slug); 
     }
+
+    async findManyByAuthorId(authorId) {
+        return await this.findMany('author_id', authorId);
+    }
 }
 
 module.exports = ArticleModel;
