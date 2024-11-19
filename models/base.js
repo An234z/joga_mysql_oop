@@ -41,10 +41,11 @@ class BaseSQLModel {
         return results;
     }
 
+    // This is the `create` method where the insertion into the table happens.
     async create(data) {
         const query = `INSERT INTO ${this.tableName} SET ?`;
         const result = await this.executeQuery(query, data);
-        return result.insertId;
+        return result.insertId;  // Return the ID of the newly created record
     }
 
     async update(id, data) {
@@ -61,3 +62,4 @@ class BaseSQLModel {
 }
 
 module.exports = BaseSQLModel;
+

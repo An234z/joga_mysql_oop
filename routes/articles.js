@@ -6,5 +6,7 @@ const articleController = new ArticleController();
 
 router.get('/', (req, res) => articleController.getAllArticles(req, res));
 router.get('/article/:slug', (req, res) => articleController.getArticleBySlug(req, res));
+router.post('/create', articleController.createNewArticle);
+
 
 module.exports = router;
